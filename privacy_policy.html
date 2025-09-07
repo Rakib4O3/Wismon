@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Wismon - Privacy Policy</title>
+<style>
+    /* Reset & Box-sizing */
+    * { margin:0; padding:0; box-sizing:border-box; }
+
+    /* Color Variables */
+    :root {
+        --primary:#6366F1;
+        --secondary:#8B5CF6;
+        --accent:#EC4899;
+        --gradient-main: linear-gradient(135deg, var(--primary), var(--secondary), var(--accent));
+        --bg:#fff;
+        --surface:#f8fafc;
+        --card:#ffffff;
+        --text:#0f172a;
+        --text-light:#64748b;
+        --border:#e2e8f0;
+        --shadow:0 8px 20px rgba(99,102,241,0.08);
+        --hover-shadow:0 6px 15px rgba(99,102,241,0.08);
+    }
+
+    /* Dark Mode */
+    @media (prefers-color-scheme: dark) {
+        :root {
+            --bg:#0f172a;
+            --surface:#1e293b;
+            --card:#0f172a;
+            --text:#f1f5f9;
+            --text-light:#94a3b8;
+            --border:#334155;
+            --shadow:0 8px 20px rgba(99,102,241,0.15);
+            --hover-shadow:0 6px 15px rgba(99,102,241,0.15);
+        }
+    }
+
+    /* Body */
+    body {
+        font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',system-ui,sans-serif;
+        background:var(--bg);
+        color:var(--text);
+        line-height:1.6;
+        min-height:100vh;
+        padding:2rem 1rem;
+    }
+
+    /* Container */
+    .container { max-width:900px; margin:0 auto; }
+
+    /* Header */
+    .header { text-align:center; margin-bottom:3rem; }
+    .title {
+        font-size:3rem;
+        font-weight:900;
+        background:var(--gradient-main);
+        -webkit-background-clip:text;
+        -webkit-text-fill-color:transparent;
+        margin-bottom:0.5rem;
+    }
+    .subtitle { color:var(--text-light); font-size:1.2rem; margin-bottom:0.25rem; }
+    .tagline { font-size:0.95rem; color:var(--text-light); font-style:italic; opacity:0.8; }
+
+    /* Content Card */
+    .content {
+        background:var(--card);
+        border-radius:20px;
+        padding:2rem;
+        border:1px solid var(--border);
+        box-shadow:var(--shadow);
+    }
+
+    /* Sections */
+    .section {
+        margin-bottom:2rem;
+        padding:1.5rem;
+        border-radius:12px;
+        background:var(--surface);
+        border-left:4px solid var(--primary);
+        transition:all 0.2s ease;
+    }
+    .section:hover { transform:translateY(-2px); box-shadow:var(--hover-shadow); }
+    .section h2 { font-size:1.5rem; font-weight:700; color:var(--primary); margin-bottom:0.75rem; }
+    .section p { font-size:1rem; color:var(--text-light); line-height:1.6; }
+
+    /* Feature Grid */
+    .feature-grid {
+        display:grid;
+        grid-template-columns:repeat(auto-fit,minmax(240px,1fr));
+        gap:1rem;
+        margin:1.5rem 0;
+    }
+    .feature {
+        padding:1rem;
+        border-radius:12px;
+        background:var(--surface);
+        border:1px solid var(--border);
+        text-align:center;
+        transition:all 0.2s ease;
+    }
+    .feature:hover { transform:translateY(-2px); box-shadow:var(--hover-shadow); }
+    .feature-icon {
+        width:45px; height:45px; margin:0 auto 0.5rem;
+        background:var(--gradient-main);
+        border-radius:50%;
+        display:flex; align-items:center; justify-content:center;
+        font-size:1.2rem; color:white;
+    }
+    .feature h3 { margin-bottom:0.25rem; font-size:1.1rem; color:var(--primary); }
+    .feature p { font-size:0.95rem; color:var(--text-light); }
+
+    /* Contact Section */
+    .contact {
+        background:var(--gradient-main);
+        color:white; padding:2rem; border-radius:16px; text-align:center;
+        margin-top:2.5rem;
+    }
+    .contact h3 { margin-bottom:0.5rem; font-size:1.3rem; }
+    .contact a { color:white; text-decoration:none; font-weight:600; border-bottom:2px solid rgba(255,255,255,0.3); transition:0.2s; }
+    .contact a:hover { border-bottom-color:white; }
+
+    /* Last Updated Date */
+    .date { text-align:center; margin-top:2rem; color:var(--text-light); font-size:0.85rem; opacity:0.7; }
+
+    /* Responsive */
+    @media (max-width:768px) {
+        .title { font-size:2.2rem; }
+        .section { padding:1rem; }
+        .feature-icon { width:40px; height:40px; font-size:1rem; }
+    }
+</style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1 class="title">Wismon</h1>
+            <p class="subtitle">Privacy Policy</p>
+        </div>
+
+        <div class="content">
+            <div class="section">
+                <h2>What We Collect</h2>
+                <p>Wismon stores your saved quotes and app preferences locally. Quotes may be fetched online for your experience.</p>
+            </div>
+
+            <div class="feature-grid">
+                <div class="feature">
+                    <div class="feature-icon">📱</div>
+                    <h3>Local Storage</h3>
+                    <p>All your data stays on your device</p>
+                </div>
+                <div class="feature">
+                    <div class="feature-icon">🌐</div>
+                    <h3>Online Quotes</h3>
+                    <p>Fresh wisdom from curated sources</p>
+                </div>
+                <div class="feature">
+                    <div class="feature-icon">🔒</div>
+                    <h3>Privacy First</h3>
+                    <p>No personal data collection</p>
+                </div>
+            </div>
+
+            <div class="section">
+                <h2>How We Use Data</h2>
+                <p>All data stays on your device. We don't collect personal information or share data with third parties.</p>
+            </div>
+
+            <div class="section">
+                <h2>Online Content</h2>
+                <p>The app may download quotes from online sources. Internet access is required, but personal data is not sent.</p>
+            </div>
+
+            <div class="section">
+                <h2>Your Control</h2>
+                <p>You can disable online quotes and clear saved data through the app settings.</p>
+            </div>
+
+            <div class="contact">
+                <h3>Questions?</h3>
+                <p>Contact us regarding this privacy policy:</p>
+                <p><a href="mailto:mdrakibkobiraj9@gmail.com">mdrakibkobiraj9@gmail.com</a></p>
+            </div>
+        </div>
+
+        <div class="date">
+            Last updated: September 2025
+        </div>
+    </div>
+</body>
+</html>
