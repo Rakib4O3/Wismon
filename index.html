@@ -4,583 +4,182 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Wismon - Privacy Policy</title>
-
-<!-- Favicon -->
 <link rel="icon" type="image/png" href="wismon_icon.png">
-
 <style>
-    * { margin:0; padding:0; box-sizing:border-box; }
-
+/* Reset & root colors */
+* {margin:0; padding:0; box-sizing:border-box;}
+:root {
+    --primary:#6366F1; --secondary:#8B5CF6; 
+    --surface:#FEFBFF; --surface-variant:#F4F4F4;
+    --outline:#79747E; --on-surface:#1C1B1F;
+    --on-surface-variant:#49454F; --shadow:rgba(0,0,0,0.2);
+}
+@media (prefers-color-scheme: dark) {
     :root {
-        --primary: #6366F1;
-        --primary-light: #818CF8;
-        --secondary: #8B5CF6;
-        --accent: #EC4899;
-        --success: #10B981;
-        --warning: #F59E0B;
-        --gradient-main: linear-gradient(135deg, #6366F1 0%, #8B5CF6 50%, #EC4899 100%);
-        --gradient-subtle: linear-gradient(135deg, #6366F1 0%, #818CF8 100%);
-        --bg: #ffffff;
-        --surface: #f8fafc;
-        --surface-elevated: #ffffff;
-        --card: #ffffff;
-        --text: #0f172a;
-        --text-secondary: #475569;
-        --text-muted: #64748b;
-        --border: #e2e8f0;
-        --border-light: #f1f5f9;
-        --shadow: 0 1px 3px rgba(0,0,0,0.1), 0 1px 2px rgba(0,0,0,0.06);
-        --shadow-md: 0 4px 6px -1px rgba(0,0,0,0.1), 0 2px 4px -1px rgba(0,0,0,0.06);
-        --shadow-lg: 0 10px 15px -3px rgba(0,0,0,0.1), 0 4px 6px -2px rgba(0,0,0,0.05);
-        --shadow-xl: 0 20px 25px -5px rgba(0,0,0,0.1), 0 10px 10px -5px rgba(0,0,0,0.04);
+        --primary:#BEC2FF; --secondary:#D8BBFF; 
+        --surface:#141218; --surface-variant:#49454F;
+        --outline:#938F99; --on-surface:#E6E1E5;
+        --on-surface-variant:#CAC4D0; --shadow:rgba(0,0,0,0.4);
     }
+}
 
-    @media (prefers-color-scheme: dark) {
-        :root {
-            --bg: #0f172a;
-            --surface: #1e293b;
-            --surface-elevated: #334155;
-            --card: #1e293b;
-            --text: #f1f5f9;
-            --text-secondary: #cbd5e1;
-            --text-muted: #94a3b8;
-            --border: #334155;
-            --border-light: #475569;
-            --shadow: 0 1px 3px rgba(0,0,0,0.3), 0 1px 2px rgba(0,0,0,0.2);
-            --shadow-md: 0 4px 6px -1px rgba(0,0,0,0.3), 0 2px 4px -1px rgba(0,0,0,0.2);
-            --shadow-lg: 0 10px 15px -3px rgba(0,0,0,0.3), 0 4px 6px -2px rgba(0,0,0,0.2);
-            --shadow-xl: 0 20px 25px -5px rgba(0,0,0,0.3), 0 10px 10px -5px rgba(0,0,0,0.2);
-        }
-    }
+/* Body & typography */
+body {font-family:'Roboto',sans-serif; background:var(--surface); color:var(--on-surface); line-height:1.6; transition:all 0.3s;}
+.container {max-width:800px; margin:0 auto; padding:24px 16px;}
+.header {text-align:center; margin-bottom:32px;}
+.logo {width:64px; height:64px; background:linear-gradient(135deg,var(--primary),var(--secondary)); border-radius:16px; display:flex; align-items:center; justify-content:center; margin:0 auto 16px; font-size:28px; color:white; box-shadow:0 4px 12px var(--shadow); cursor:pointer; transition:transform 0.2s;}
+.logo:hover {transform:scale(1.05);}
+.title {font-size:34px; font-weight:500; margin-bottom:8px;}
+.subtitle {font-size:16px; color:var(--on-surface-variant); margin-bottom:16px;}
+.app-link {display:inline-block; margin-bottom:24px; padding:12px 24px; background:linear-gradient(135deg,var(--primary),var(--secondary)); color:white; border-radius:24px; text-decoration:none; font-weight:500; box-shadow:0 4px 12px var(--shadow);}
 
-    body {
-        font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', sans-serif;
-        background: var(--bg);
-        color: var(--text);
-        line-height: 1.6;
-        min-height: 100vh;
-        padding: 0;
-        overflow-x: hidden;
-    }
+/* Quote Card */
+.quote-card {background:var(--surface-variant); border-radius:28px; padding:24px; margin-bottom:24px; text-align:center; position:relative; cursor:pointer; transition:all 0.2s;}
+.quote-text {font-size:18px; font-style:italic; margin-bottom:12px; color:var(--on-surface);}
+.quote-author {font-size:14px; color:var(--on-surface-variant); font-weight:500;}
+.refresh-btn {position:absolute; top:16px; right:16px; width:40px; height:40px; border:none; border-radius:20px; background:var(--primary); color:white; cursor:pointer; display:flex; align-items:center; justify-content:center; font-size:16px; transition:all 0.2s;}
+.refresh-btn:hover {transform:rotate(90deg); background:var(--secondary);}
 
-    .background-pattern {
-        position: fixed;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        background: 
-            radial-gradient(circle at 20% 80%, rgba(99, 102, 241, 0.03) 0%, transparent 50%),
-            radial-gradient(circle at 80% 20%, rgba(139, 92, 246, 0.03) 0%, transparent 50%),
-            radial-gradient(circle at 40% 40%, rgba(236, 72, 153, 0.02) 0%, transparent 50%);
-        pointer-events: none;
-        z-index: -1;
-    }
+/* Main Card */
+.main-card {background:var(--surface); border-radius:28px; overflow:hidden; border:1px solid var(--outline); margin-bottom:32px;}
+.card-header {background:linear-gradient(135deg,var(--primary),var(--secondary)); color:white; padding:32px 24px; text-align:center;}
+.card-header h2 {font-size:24px; font-weight:400; margin-bottom:8px;}
+.card-header p {font-size:16px; opacity:0.9;}
+.card-body {padding:24px;}
+.badge {display:inline-flex; align-items:center; gap:8px; background:rgba(16,185,129,0.12); color:#059669; padding:12px 16px; border-radius:16px; font-size:14px; font-weight:500; margin-bottom:24px; border:1px solid rgba(16,185,129,0.2);}
+.features-grid {display:grid; grid-template-columns:repeat(auto-fit,minmax(280px,1fr)); gap:16px; margin:24px 0;}
+.feature-card {background:var(--surface-variant); padding:20px; border-radius:20px; text-align:center; cursor:pointer; border:1px solid var(--outline);}
+.feature-card:hover {transform:translateY(-3px); box-shadow:0 6px 16px var(--shadow);}
+.feature-icon {width:56px; height:56px; background:linear-gradient(135deg,var(--primary),var(--secondary)); border-radius:16px; display:flex; align-items:center; justify-content:center; margin:0 auto 16px; font-size:24px; color:white; box-shadow:0 4px 12px var(--shadow);}
+.feature-card h3 {font-size:18px; font-weight:500; margin-bottom:10px;}
+.feature-card p {font-size:14px; color:var(--on-surface-variant); line-height:1.5;}
 
-    .container {
-        max-width: 900px;
-        margin: 0 auto;
-        padding: 2rem 1rem;
-        position: relative;
-        z-index: 1;
-    }
+/* Sections */
+.section {margin-bottom:24px;}
+.section-title {display:flex; align-items:center; gap:12px; margin-bottom:12px; font-size:18px; font-weight:500;}
+.section-icon {width:36px; height:36px; background:linear-gradient(135deg,var(--primary),var(--secondary)); border-radius:12px; display:flex; align-items:center; justify-content:center; font-size:16px; color:white; flex-shrink:0;}
+.section-content {background:var(--surface-variant); padding:16px; border-radius:16px; border:1px solid var(--outline); transition:all 0.2s;}
+.section-content:hover {transform:translateY(-2px); box-shadow:0 4px 16px var(--shadow);}
+.section-content p {color:var(--on-surface-variant); font-size:14px; line-height:1.6; margin:0;}
 
-    .header {
-        text-align: center;
-        margin-bottom: 4rem;
-        padding: 2rem 0;
-    }
+/* Contact & Footer */
+.contact-card {background:var(--surface-variant); border-radius:20px; padding:28px 24px; text-align:center; border:1px solid var(--outline);}
+.contact-card h3 {font-size:18px; font-weight:500; margin-bottom:12px;}
+.contact-card p {color:var(--on-surface-variant); margin-bottom:20px; font-size:14px;}
+.contact-links {display:flex; gap:16px; justify-content:center; flex-wrap:wrap;}
+.contact-btn {display:inline-flex; align-items:center; gap:6px; background:linear-gradient(135deg,var(--primary),var(--secondary)); color:white; padding:10px 20px; border-radius:20px; text-decoration:none; font-size:14px; font-weight:500; transition:all 0.2s; box-shadow:0 4px 12px var(--shadow);}
+.contact-btn:hover {transform:translateY(-2px); box-shadow:0 6px 16px var(--shadow);}
+.footer {text-align:center; padding:24px 0; color:var(--on-surface-variant); font-size:14px; border-top:1px solid var(--outline); margin-top:32px; font-style:italic;}
 
-    .logo-container {
-        position: relative;
-        display: inline-block;
-        margin-bottom: 1rem;
-    }
+/* Loading + Spinning */
+.loading {opacity:0.6; pointer-events:none;}
+@keyframes spin {from{transform:rotate(0deg);} to{transform:rotate(360deg);}}
+.spinning {animation:spin 0.5s ease-in-out;}
 
-    .logo-bg {
-        width: 80px;
-        height: 80px;
-        background: var(--gradient-main);
-        border-radius: 20px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        margin: 0 auto 1rem;
-        box-shadow: var(--shadow-lg);
-        transform: rotate(-2deg);
-        transition: transform 0.3s ease;
-    }
-
-    .logo-bg:hover {
-        transform: rotate(0deg) scale(1.05);
-    }
-
-    .logo-icon {
-        font-size: 2rem;
-        filter: drop-shadow(0 2px 4px rgba(0,0,0,0.2));
-    }
-
-    .title {
-        font-size: 3.5rem;
-        font-weight: 900;
-        background: var(--gradient-main);
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
-        background-clip: text;
-        margin-bottom: 0.5rem;
-        letter-spacing: -0.02em;
-    }
-
-    .subtitle {
-        color: var(--text-muted);
-        font-size: 1.25rem;
-        font-weight: 500;
-        margin-bottom: 0.5rem;
-    }
-
-    .tagline {
-        color: var(--text-secondary);
-        font-size: 1rem;
-        opacity: 0.8;
-    }
-
-    .content {
-        background: var(--card);
-        border-radius: 24px;
-        padding: 0;
-        border: 1px solid var(--border);
-        box-shadow: var(--shadow-xl);
-        overflow: hidden;
-        backdrop-filter: blur(10px);
-    }
-
-    .content-header {
-        background: var(--gradient-subtle);
-        padding: 2rem;
-        text-align: center;
-        color: white;
-    }
-
-    .content-header h2 {
-        font-size: 1.5rem;
-        font-weight: 700;
-        margin-bottom: 0.5rem;
-    }
-
-    .content-header p {
-        font-size: 1rem;
-        opacity: 0.9;
-    }
-
-    .content-body {
-        padding: 2rem;
-    }
-
-    .section {
-        margin-bottom: 2.5rem;
-        padding: 0;
-    }
-
-    .section-title {
-        display: flex;
-        align-items: center;
-        font-size: 1.25rem;
-        font-weight: 700;
-        color: var(--text);
-        margin-bottom: 1rem;
-        gap: 0.75rem;
-    }
-
-    .section-icon {
-        width: 40px;
-        height: 40px;
-        background: var(--gradient-subtle);
-        border-radius: 12px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        font-size: 1.1rem;
-        flex-shrink: 0;
-    }
-
-    .section-content {
-        background: var(--surface);
-        border-radius: 16px;
-        padding: 1.5rem;
-        border: 1px solid var(--border-light);
-        transition: all 0.2s ease;
-    }
-
-    .section-content:hover {
-        transform: translateY(-2px);
-        box-shadow: var(--shadow-md);
-    }
-
-    .section-content p {
-        color: var(--text-secondary);
-        line-height: 1.7;
-        margin: 0;
-    }
-
-    .feature-grid {
-        display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-        gap: 1.5rem;
-        margin: 2rem 0;
-    }
-
-    .feature {
-        background: var(--surface-elevated);
-        padding: 1.5rem;
-        border-radius: 16px;
-        border: 1px solid var(--border);
-        text-align: center;
-        transition: all 0.3s ease;
-        position: relative;
-        overflow: hidden;
-    }
-
-    .feature:hover {
-        transform: translateY(-4px);
-        box-shadow: var(--shadow-lg);
-    }
-
-    .feature::before {
-        content: '';
-        position: absolute;
-        top: 0;
-        left: 0;
-        right: 0;
-        height: 3px;
-        background: var(--gradient-main);
-    }
-
-    .feature-icon {
-        width: 60px;
-        height: 60px;
-        margin: 0 auto 1rem;
-        background: var(--gradient-main);
-        border-radius: 16px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        font-size: 1.5rem;
-        box-shadow: var(--shadow-md);
-    }
-
-    .feature h3 {
-        margin-bottom: 0.5rem;
-        font-size: 1.1rem;
-        font-weight: 600;
-        color: var(--text);
-    }
-
-    .feature p {
-        font-size: 0.95rem;
-        color: var(--text-muted);
-        line-height: 1.5;
-    }
-
-    .highlight-box {
-        background: linear-gradient(135deg, var(--primary), var(--secondary));
-        color: white;
-        padding: 2rem;
-        border-radius: 20px;
-        margin: 2rem 0;
-        text-align: center;
-        position: relative;
-        overflow: hidden;
-    }
-
-    .highlight-box::before {
-        content: '';
-        position: absolute;
-        top: 0;
-        left: -50%;
-        width: 200%;
-        height: 100%;
-        background: linear-gradient(90deg, transparent, rgba(255,255,255,0.1), transparent);
-        transform: translateX(-100%);
-        animation: shimmer 3s infinite;
-    }
-
-    @keyframes shimmer {
-        0% { transform: translateX(-100%); }
-        100% { transform: translateX(100%); }
-    }
-
-    .highlight-box h3 {
-        font-size: 1.4rem;
-        font-weight: 700;
-        margin-bottom: 0.75rem;
-    }
-
-    .highlight-box p {
-        font-size: 1rem;
-        opacity: 0.95;
-        line-height: 1.6;
-    }
-
-    .contact-section {
-        background: var(--surface);
-        border-radius: 20px;
-        padding: 2rem;
-        border: 1px solid var(--border);
-        text-align: center;
-        margin-top: 3rem;
-    }
-
-    .contact-section h3 {
-        color: var(--text);
-        font-size: 1.3rem;
-        font-weight: 700;
-        margin-bottom: 1rem;
-    }
-
-    .contact-info {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        gap: 1rem;
-        flex-wrap: wrap;
-    }
-
-    .contact-link {
-        display: inline-flex;
-        align-items: center;
-        gap: 0.5rem;
-        background: var(--gradient-main);
-        color: white;
-        text-decoration: none;
-        padding: 0.75rem 1.5rem;
-        border-radius: 12px;
-        font-weight: 600;
-        transition: all 0.2s ease;
-        font-size: 0.95rem;
-    }
-
-    .contact-link:hover {
-        transform: translateY(-2px);
-        box-shadow: var(--shadow-md);
-    }
-
-    .footer {
-        text-align: center;
-        margin-top: 3rem;
-        padding: 2rem 0;
-        color: var(--text-muted);
-        font-size: 0.9rem;
-        border-top: 1px solid var(--border-light);
-    }
-
-    .badge {
-        display: inline-flex;
-        align-items: center;
-        gap: 0.5rem;
-        background: rgba(16, 185, 129, 0.1);
-        color: var(--success);
-        padding: 0.5rem 1rem;
-        border-radius: 20px;
-        font-size: 0.85rem;
-        font-weight: 600;
-        border: 1px solid rgba(16, 185, 129, 0.2);
-        margin-bottom: 1rem;
-    }
-
-    @media (max-width: 768px) {
-        .container {
-            padding: 1rem;
-        }
-
-        .title {
-            font-size: 2.5rem;
-        }
-
-        .logo-bg {
-            width: 60px;
-            height: 60px;
-        }
-
-        .logo-icon {
-            font-size: 1.5rem;
-        }
-
-        .content-header,
-        .content-body {
-            padding: 1.5rem;
-        }
-
-        .section-content {
-            padding: 1rem;
-        }
-
-        .feature-grid {
-            grid-template-columns: 1fr;
-            gap: 1rem;
-        }
-
-        .feature {
-            padding: 1rem;
-        }
-
-        .feature-icon {
-            width: 50px;
-            height: 50px;
-            font-size: 1.25rem;
-        }
-
-        .contact-info {
-            flex-direction: column;
-        }
-
-        .contact-link {
-            width: 100%;
-            justify-content: center;
-        }
-    }
-
-    @media (max-width: 480px) {
-        .title {
-            font-size: 2rem;
-        }
-
-        .subtitle {
-            font-size: 1.1rem;
-        }
-    }
+/* Responsive */
+@media (max-width:768px) {.container{padding:16px;} .title{font-size:28px;} .logo{width:56px;height:56px;font-size:24px;} .features-grid{grid-template-columns:1fr;gap:12px;} .contact-links{flex-direction:column;} .contact-btn{justify-content:center;} .quote-text{font-size:16px;} .card-header{padding:24px 16px;} .card-body{padding:16px;}}
+@media (max-width:480px){.title{font-size:24px;} .quote-card{padding:20px;} .feature-card{padding:20px;}}
 </style>
 </head>
 <body>
-    <div class="background-pattern"></div>
-    
-    <div class="container">
-        <div class="header">
-            <div class="logo-container">
-                <div class="logo-bg">
-                    <span class="logo-icon">🦉</span>
-                </div>
-            </div>
-            <h1 class="title">Wismon</h1>
-            <p class="subtitle">Privacy Policy</p>
-            <p class="tagline">Your wisdom, your privacy, your control</p>
+<div class="container">
+
+    <!-- Header -->
+    <div class="header">
+        <div class="logo" onclick="refreshQuote()">🦉</div>
+        <h1 class="title">Wismon</h1>
+        <p class="subtitle">Privacy-first, wisdom always</p>
+        <a href="https://play.google.com/store/apps/details?id=com.wismon.app" class="app-link">📲 Get the App</a>
+    </div>
+
+    <!-- Quote Card -->
+    <div class="quote-card" onclick="refreshQuote()" id="quoteCard">
+        <button class="refresh-btn" onclick="refreshQuote(event)">↻</button>
+        <div class="quote-text" id="quoteText">Loading wisdom...</div>
+        <div class="quote-author" id="quoteAuthor">— Wismon</div>
+    </div>
+
+    <!-- Main Privacy Card -->
+    <div class="main-card">
+        <div class="card-header">
+            <h2>Designed for You</h2>
+            <p>We never collect your personal data</p>
         </div>
-
-        <div class="content">
-            <div class="content-header">
-                <h2>Privacy-First Philosophy</h2>
-                <p>We believe your personal data should stay personal. Here's how we protect your privacy.</p>
-            </div>
-
-            <div class="content-body">
-                <div class="badge">
-                    <span>✓</span>
-                    <span>No Data Collection • Privacy Guaranteed</span>
+        <div class="card-body">
+            <div class="badge">✓ Zero Data Collection</div>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">📱</div>
+                    <h3>Local Storage</h3>
+                    <p>Quotes and settings stay on your device only.</p>
                 </div>
-
-                <div class="feature-grid">
-                    <div class="feature">
-                        <div class="feature-icon">📱</div>
-                        <h3>Local-First Storage</h3>
-                        <p>All your saved quotes, preferences, and app data stays exclusively on your device. No cloud storage, no external servers.</p>
-                    </div>
-                    <div class="feature">
-                        <div class="feature-icon">🌐</div>
-                        <h3>Smart Quote Fetching</h3>
-                        <p>Fresh inspirational content from curated online sources, fetched anonymously without tracking your activity.</p>
-                    </div>
-                    <div class="feature">
-                        <div class="feature-icon">🔒</div>
-                        <h3>Zero Personal Data</h3>
-                        <p>We don't collect, store, or process any personal information. No accounts, no profiles, no tracking.</p>
-                    </div>
+                <div class="feature-card">
+                    <div class="feature-icon">🌐</div>
+                    <h3>Anonymous Quotes</h3>
+                    <p>Fresh inspiration without tracking or profiling.</p>
                 </div>
-
-                <div class="section">
-                    <div class="section-title">
-                        <div class="section-icon">📊</div>
-                        Data We Don't Collect
-                    </div>
-                    <div class="section-content">
-                        <p>Wismon operates with complete privacy respect. We don't collect personal information, usage analytics, device identifiers, location data, or any other tracking data. Your interaction with the app remains completely private.</p>
-                    </div>
-                </div>
-
-                <div class="section">
-                    <div class="section-title">
-                        <div class="section-icon">💾</div>
-                        Local Data Storage
-                    </div>
-                    <div class="section-content">
-                        <p>Your saved quotes, app preferences, daily statistics, and notification settings are stored locally on your device using Android's secure SharedPreferences system. This data never leaves your device.</p>
-                    </div>
-                </div>
-
-                <div class="section">
-                    <div class="section-title">
-                        <div class="section-icon">🌍</div>
-                        Online Content Access
-                    </div>
-                    <div class="section-content">
-                        <p>When enabled, the app fetches inspirational quotes from curated online sources to provide fresh content. These requests are made anonymously without sending any personal data or device information.</p>
-                    </div>
-                </div>
-
-                <div class="section">
-                    <div class="section-title">
-                        <div class="section-icon">🔔</div>
-                        Notifications & Background Tasks
-                    </div>
-                    <div class="section-content">
-                        <p>Daily inspirational notifications are generated locally on your device using Android's WorkManager. No data is sent to external servers for notification processing.</p>
-                    </div>
-                </div>
-
-                <div class="highlight-box">
-                    <h3>Your Complete Control</h3>
-                    <p>Disable online quotes, turn off notifications, or clear all saved data anytime through the app settings. You have full control over your Wismon experience and data.</p>
-                </div>
-
-                <div class="section">
-                    <div class="section-title">
-                        <div class="section-icon">🔗</div>
-                        Third-Party Services
-                    </div>
-                    <div class="section-content">
-                        <p>Wismon may access external quote sources and uses Android system services for sharing and notifications. No personal data is shared with these services, and all interactions remain anonymous.</p>
-                    </div>
-                </div>
-
-                <div class="section">
-                    <div class="section-title">
-                        <div class="section-icon">📱</div>
-                        App Permissions
-                    </div>
-                    <div class="section-content">
-                        <p>The app requests only essential permissions: Internet access for fetching quotes, notification permissions for daily inspiration, and wake lock for reliable background notifications. All permissions are used transparently and only for their stated purpose.</p>
-                    </div>
-                </div>
-
-                <div class="contact-section">
-                    <h3>Questions About Privacy?</h3>
-                    <p style="margin-bottom: 1.5rem; color: var(--text-secondary);">We're committed to transparency. Reach out if you have any privacy concerns.</p>
-                    <div class="contact-info">
-                        <a href="mailto:mdrakibkobiraj9@gmail.com" class="contact-link">
-                            <span>📧</span>
-                            <span>Email Support</span>
-                        </a>
-                        <a href="https://t.me/rakib4o3" class="contact-link">
-                            <span>💬</span>
-                            <span>Telegram</span>
-                        </a>
-                    </div>
+                <div class="feature-card">
+                    <div class="feature-icon">🔒</div>
+                    <h3>No Tracking</h3>
+                    <p>Zero analytics, zero external access.</p>
                 </div>
             </div>
-        </div>
 
-        <div class="footer">
-            <p><strong>Last updated:</strong> September 2025</p>
-            <p style="margin-top: 0.5rem; opacity: 0.7;">Made with ❤️ by Rakib • Built for Privacy</p>
+            <div class="section">
+                <div class="section-title"><div class="section-icon">📊</div>What We Don’t Collect</div>
+                <div class="section-content"><p>No personal info, device IDs, or location data. Your use stays private.</p></div>
+            </div>
+
+            <div class="section">
+                <div class="section-title"><div class="section-icon">💾</div>Local Data Only</div>
+                <div class="section-content"><p>All quotes, settings, and stats remain safely on your device.</p></div>
+            </div>
+
+            <div class="section">
+                <div class="section-title"><div class="section-icon">🌍</div>Online Content</div>
+                <div class="section-content"><p>Online quotes are fetched anonymously. No personal data leaves your device.</p></div>
+            </div>
+
+            <div class="contact-card">
+                <h3>Questions?</h3>
+                <p>Reach out anytime.</p>
+                <div class="contact-links">
+                    <a href="mailto:mdrakibkobiraj9@gmail.com" class="contact-btn">📧 Email</a>
+                    <a href="https://t.me/rakib4o3" class="contact-btn">💬 Telegram</a>
+                </div>
+            </div>
         </div>
     </div>
+
+    <!-- Footer -->
+    <div class="footer">
+        <p><strong>Last updated:</strong> September 2025</p>
+        <p>Made with ❤️ by Rakib </p>
+    </div>
+</div>
+
+<script>
+const quotes = [
+    { text: "Wisdom begins in wonder.", author: "Socrates" },
+    { text: "Be curious, not judgmental.", author: "Walt Whitman" },
+    { text: "Small steps every day.", author: "Rakib" },
+    { text: "Privacy is the real freedom.", author: "Anonymous" }
+];
+
+function refreshQuote(event){
+    if(event) event.stopPropagation();
+    const card = document.getElementById('quoteCard');
+    const btn = document.querySelector('.refresh-btn');
+    btn.classList.add('spinning'); card.classList.add('loading');
+
+    const quote = quotes[Math.floor(Math.random()*quotes.length)];
+    document.getElementById('quoteText').textContent = `"${quote.text}"`;
+    document.getElementById('quoteAuthor').textContent = `— ${quote.author}`;
+
+    setTimeout(()=>{btn.classList.remove('spinning'); card.classList.remove('loading');}, 500);
+}
+
+document.addEventListener('DOMContentLoaded', refreshQuote);
+</script>
 </body>
 </html>
